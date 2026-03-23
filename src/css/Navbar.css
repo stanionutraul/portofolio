@@ -1,0 +1,51 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: center; /* centrare nav-items */
+  padding: 1rem 2rem;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+.nav-items {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.25rem;
+  border-radius: 9999px; /* border-radius pe nav-items */
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* shadow mic pentru relief */
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.nav-items.scrolled {
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25); /* shadow mai pronunțat la scroll */
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: 9999px; /* rotunjire link */
+  text-decoration: none;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 0.975rem; /* text-sm */
+  color: rgba(20, 20, 20, 0.7);
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #141414;
+  background-color: rgba(63, 163, 124, 0.1);
+}
+
+.nav-emoji {
+  font-size: 1rem;
+}
