@@ -8,6 +8,7 @@ import {
   NodeIcon,
 } from "../Icons/Icons";
 import "../css/Skills.css";
+import "../css/Responsive.css";
 
 const skills = [
   { name: "HTML5", icon: <HtmlIcon /> },

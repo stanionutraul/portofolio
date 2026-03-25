@@ -35,7 +35,7 @@
 .blob-2 {
   bottom: 10%;
   right: 5%;
-  width: 450px; /* mai mare */
+  width: 450px;
   height: 450px;
   background: radial-gradient(
     circle,
@@ -67,7 +67,7 @@
 /* Title & subtitle */
 .hero-title {
   font-family: "Space Grotesk", sans-serif;
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 700;
   color: var(--foreground);
   margin-bottom: 1.5rem;
@@ -117,7 +117,14 @@
 }
 
 /* Icons */
-.icon-small {
+.hero-socials .icon-small,
+.resume-link .icon-small {
+  width: 1.7rem;
+  height: 1.7rem;
+  display: block;
+}
+
+.icon-small-hero {
   width: 1rem;
   height: 1rem;
 }
@@ -147,11 +154,31 @@
   text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.3rem;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
+/* Hover effect */
 .resume-link:hover {
-  text-decoration: underline;
+  color: #16a34a; /* verde mai intens */
+  transform: translateY(-2px);
+}
+
+/* Underline animat */
+.resume-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background: var(--primary);
+  transition: width 0.3s ease;
+}
+
+.resume-link:hover::after {
+  width: 100%;
 }
 
 /* Fade-in animation */

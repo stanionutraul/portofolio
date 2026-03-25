@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "../css/Navbar.css";
+import "../css/Responsive.css";
 
 const navItems = [
   { label: "Home", emoji: "🏠", href: "#home" },
@@ -11,6 +12,7 @@ const navItems = [
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -20,14 +22,30 @@ const Navbar = () => {
 
   return (
     <header className="navbar">
-      <nav className={`nav-items ${scrolled ? "scrolled" : ""}`}>
+      <nav
+        className={`nav-items ${scrolled ? "scrolled" : ""} ${menuOpen ? "open" : ""}`}
+      >
         {navItems.map((item) => (
-          <a key={item.label} href={item.href} className="nav-link">
+          <a
+            key={item.label}
+            href={item.href}
+            className="nav-link"
+            onClick={() => setMenuOpen(false)}
+          >
             <span className="nav-emoji">{item.emoji}</span>
             {item.label}
           </a>
         ))}
       </nav>
+
+      <div
+        className={`hamburger ${menuOpen ? "active" : ""}`}
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </header>
   );
 };

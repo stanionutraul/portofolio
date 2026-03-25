@@ -6,6 +6,8 @@ import {
   FileIcon,
 } from "../Icons/Icons";
 import "../css/Hero.css";
+import "../css/Responsive.css";
+// import myResume from "../assets/StanIonut-CV.pdf";
 
 const Hero = () => {
   return (
@@ -17,10 +19,9 @@ const Hero = () => {
       <div className="hero-content">
         <h1 className="hero-title">Stan Ionut Raul</h1>
         <p className="hero-subtitle">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae
-          temporibus impedit necessitatibus voluptatibus delectus ullam, amet
-          nisi rem blanditiis recusandae suscipit facere aliquam doloremque odit
-          repellendus saepe. Placeat, sit atque.
+          Front-End developer building modern, responsive web applications with
+          React and JavaScript. Focused on clean code, user experience, and
+          growing into full-stack development.
         </p>
 
         <div className="hero-buttons">
@@ -28,14 +29,14 @@ const Hero = () => {
             View My Work
           </a>
           <a href="#contact" className="btn btn-outline flex-center">
-            <MessageIcon className="icon-small" />
+            <MessageIcon className="icon-small-hero" />
             Let's Talk
           </a>
         </div>
 
         <div className="hero-socials">
           <a
-            href="https://github.com/ek-sai"
+            href="https://github.com/stanionutraul"
             target="_blank"
             rel="noopener noreferrer"
             className="social-link"
@@ -43,7 +44,7 @@ const Hero = () => {
             <GithubIcon className="icon-small" />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/stan-ionut-5671b8331/"
             target="_blank"
             rel="noopener noreferrer"
             className="social-link"

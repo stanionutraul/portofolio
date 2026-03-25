@@ -5,38 +5,40 @@
   right: 0;
   z-index: 50;
   display: flex;
-  justify-content: center; /* centrare nav-items */
+  justify-content: center;
   padding: 1rem 2rem;
   backdrop-filter: blur(5px);
   transition: all 0.3s ease;
 }
 
+/* NAV ITEMS */
 .nav-items {
   display: flex;
   gap: 0.5rem;
   padding: 0.25rem;
-  border-radius: 9999px; /* border-radius pe nav-items */
+  border-radius: 9999px;
   background-color: rgba(255, 255, 255, 0.6);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* shadow mic pentru relief */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
   backdrop-filter: blur(4px);
 }
 
 .nav-items.scrolled {
   background-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25); /* shadow mai pronunțat la scroll */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
 
+/* LINKS */
 .nav-link {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   padding: 0.6rem 1rem;
-  border-radius: 9999px; /* rotunjire link */
+  border-radius: 9999px;
   text-decoration: none;
   font-family: "Space Grotesk", sans-serif;
   font-weight: 500;
-  font-size: 0.975rem; /* text-sm */
+  font-size: 0.975rem;
   color: rgba(20, 20, 20, 0.7);
   transition: all 0.3s ease;
 }
@@ -49,3 +51,66 @@
 .nav-emoji {
   font-size: 1rem;
 }
+
+/* ================== HAMBURGER ================== */
+.hamburger {
+  display: none; /* 🔥 ascuns by default */
+  width: 28px;
+  height: 22px;
+  position: relative;
+  cursor: pointer;
+
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 8px;
+  padding: 4px;
+  background: transparent;
+
+  transition: all 0.3s ease;
+  z-index: 110;
+}
+
+/* LINES */
+.hamburger span {
+  position: absolute;
+  height: 2.5px;
+  width: 100%;
+  background: #141414;
+  border-radius: 2px;
+  transition: all 0.35s ease;
+}
+
+/* POSITION */
+.hamburger span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hamburger span:nth-child(3) {
+  bottom: 0;
+}
+
+/* ACTIVE (X animation) */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 50%;
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg);
+  bottom: 50%;
+}
+
+/* HOVER EFFECT */
+/* .hamburger:hover span {
+  background: #22c55e;
+} */
