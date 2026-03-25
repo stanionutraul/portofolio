@@ -7,7 +7,7 @@ import {
 } from "../Icons/Icons";
 import "../css/Hero.css";
 import "../css/Responsive.css";
-// import myResume from "../assets/StanIonut-CV.pdf";
+import myResume from "../assets/StanIonut-CV (3).pdf";
 
 const Hero = () => {
   return (
@@ -51,7 +51,7 @@ const Hero = () => {
           >
             <LinkedinIcon className="icon-small" />
           </a>
-          <a href="/resume.pdf" target="_blank" className="resume-link">
+          <a href={myResume} target="_blank" className="resume-link">
             <FileIcon className="icon-small" />
             Resume
           </a>

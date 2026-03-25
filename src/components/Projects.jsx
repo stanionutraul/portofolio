@@ -21,8 +21,8 @@ const projects = [
     description:
       "Personal portfolio showcasing projects, skills, and experience.",
     tags: ["React", "CSS"],
-    github: "https://github.com/ek-sai/Portfolio",
-    live: "https://example.com/portfolio",
+    github: "https://github.com/stanionutraul/portofolio",
+    live: "https://stanportofolio.netlify.app/",
     image: PortfolioImg,
   },
   {
